@@ -1,0 +1,106 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ink: var(--ink);
+
+  --font-display: "Bebas Neue", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --ease-studio: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+:root {
+  --radius: 0.25rem;
+
+  /* Alpaca brand */
+  --background: oklch(0.975 0.003 90);   /* off-white #f8f8f7 */
+  --foreground: oklch(0.16 0 0);          /* near black #0a0a0a */
+  --ink: oklch(0.16 0 0);
+  --primary: oklch(0.94 0.23 122);        /* chartreuse lime #d4ff00 */
+  --primary-foreground: oklch(0.16 0 0);
+
+  --card: oklch(1 0 0);
+  --card-foreground: var(--foreground);
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--foreground);
+
+  --secondary: oklch(0.16 0 0);
+  --secondary-foreground: oklch(0.975 0.003 90);
+  --muted: oklch(0.93 0.003 90);
+  --muted-foreground: oklch(0.45 0 0);
+  --accent: oklch(0.94 0.23 122);
+  --accent-foreground: oklch(0.16 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.984 0 0);
+  --border: oklch(0.16 0 0 / 0.1);
+  --input: oklch(0.16 0 0 / 0.15);
+  --ring: oklch(0.16 0 0 / 0.3);
+}
+
+@keyframes reveal {
+  from { clip-path: inset(100% 0 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@utility animate-reveal {
+  animation: reveal 1s var(--ease-studio) both;
+}
+@utility animate-fade-up {
+  animation: fadeUp 0.9s var(--ease-studio) both;
+}
+@utility animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+  ::selection {
+    background: var(--color-primary);
+    color: var(--color-primary-foreground);
+  }
+}
