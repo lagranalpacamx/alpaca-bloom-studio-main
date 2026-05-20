@@ -13,8 +13,8 @@ const workFestival = "/assets/work-festival.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Alpaca — Estudio Creativo Mexicano" },
-      { name: "description", content: "Boost your brand. Diseño digital, branding, interiorismo y experiencias BTL desde México." },
+      { title: "Alpaca — Estudio Creativo" },
+      { name: "description", content: "Boost your brand. Diseño digital, branding, interiorismo y experiencias BTL en México." },
     ],
   }),
   component: Home,
