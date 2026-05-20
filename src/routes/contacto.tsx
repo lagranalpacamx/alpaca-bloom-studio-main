@@ -54,22 +54,33 @@ function Contacto() {
         </aside>
 
         <form
-          action="https://formspree.io/f/mpqnqogp"
-          method="POST"
-            className="lg:col-span-6 space-y-4"
-        >
+  onSubmit={async (e) => {
+    e.preventDefault();
 
-<input  
-  type="hidden"
-  name="_subject"
-  value="Nuevo mensaje desde Alpaca"
-/>
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
-<input
-  type="hidden"
-  name="_next"
-  value="https://alpaca.com.mx/contacto"
-/>
+    formData.append("interests", picked.join(", "));
+
+    const res = await fetch("https://formspree.io/f/mpqnqogp", {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (res.ok) {
+      setSent(true);
+      form.reset();
+      setPicked([]);
+    } else {
+      alert("Error al enviar. Intenta de nuevo.");
+    }
+  }}
+  className="lg:col-span-6 space-y-4"
+>
+
 
           <div>
             <label className="font-mono text-[11px] uppercase tracking-widest text-muted-foreground block mb-3">
