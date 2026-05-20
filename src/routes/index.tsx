@@ -81,7 +81,7 @@ function Home() {
 
         <div className="relative max-w-6xl animate-fade-up">
           <p className="font-mono text-[11px] uppercase tracking-widest text-primary mb-6">
-            (ESTUDIO CREATIVO EN LA LAGUNA)
+            (ESTUDIO CREATIVO)
           </p>
           <h1 className="font-display text-6xl sm:text-7xl md:text-[10rem] leading-[0.85] uppercase tracking-tighter text-balance">
             Boost <span className="text-primary">your</span> brand.
