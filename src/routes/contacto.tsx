@@ -56,7 +56,7 @@ function Contacto() {
         <form
           action="https://formspree.io/f/mpqnqogp"
           method="POST"
-          className="space-y-6"
+            className="lg:col-span-8 space-y-6"
         >
 
 <input  
