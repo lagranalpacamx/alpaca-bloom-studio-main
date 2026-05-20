@@ -54,7 +54,6 @@ const featured = [
   { img: workBranding, tag: "Branding", title: "Identidad Neón Pulse", year: "2024" },
   { img: workHotel, tag: "Interiorismo", title: "Casa Aluna · Tulum", year: "2024" },
   { img: workFestival, tag: "BTL · Producción", title: "Festival Eclipse MX", year: "2023" },
-  { img: workBranding, tag: "Web Design", title: "Studio Nova", year: "2025" },
 ];
 
 const marquee = [

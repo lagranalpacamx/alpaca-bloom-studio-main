@@ -6,6 +6,7 @@ const workFestival = "/assets/work-festival.jpg";
 const serviceDigital = "/assets/service-digital.jpg";
 const serviceInterior = "/assets/service-interior.jpg";
 const serviceBtl = "/assets/service-btl.jpg";
+const studionova = "/assets/studio-nova.jpg";
 
 export const Route = createFileRoute("/proyectos")({
   head: () => ({
@@ -25,6 +26,7 @@ const projects = [
   { img: serviceInterior, tag: "Interiorismo · Retail", title: "Galería Mineral", year: "2024", client: "Joyería contemporánea" },
   { img: serviceDigital, tag: "Social · Campaña", title: "Verano Loop", year: "2024", client: "Marca de moda" },
   { img: serviceBtl, tag: "Activación", title: "Pop-up Halo", year: "2023", client: "Tech consumer" },
+  { img: studionova, tag: "Branding", title: "Studio Nova", year: "2025", client: "Identidad de marca" },
 ];
 
 function Proyectos() {
