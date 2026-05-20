@@ -92,7 +92,7 @@ function Home() {
             </p>
             <Link
               to="/contacto"
-              className="self-end bg-primary text-foreground px-8 py-4 font-mono text-xs uppercase tracking-widest font-bold hover:bg-background hover:text-foreground transition-colors inline-flex items-center gap-3"
+              className="ml-auto bg-primary text-foreground px-8 py-4 font-mono text-xs uppercase tracking-widest font-bold hover:bg-background hover:text-foreground transition-colors inline-flex items-center gap-3"
             >
               Iniciar Proyecto <ArrowUpRight className="size-4" />
             </Link>
