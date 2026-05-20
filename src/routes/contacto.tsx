@@ -54,8 +54,9 @@ function Contacto() {
         </aside>
 
         <form
-          onSubmit={(e) => { e.preventDefault(); setSent(true); }}
-          className="lg:col-span-8 space-y-10"
+          action="https://formspree.io/f/mpqnqogp"
+          method="POST"
+          className="space-y-6"
         >
           <div>
             <label className="font-mono text-[11px] uppercase tracking-widest text-muted-foreground block mb-3">
