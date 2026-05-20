@@ -43,9 +43,9 @@ export function SiteFooter() {
           <div>
             <p className="opacity-50 mb-3">Social</p>
             <ul className="space-y-2">
-              <li><a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:underline">Instagram</a></li>
-              <li><a href="https://behance.net" target="_blank" rel="noreferrer" className="hover:underline">Behance</a></li>
-              <li><a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:underline">LinkedIn</a></li>
+              <li><a href="https://www.instagram.com/alpaca_creativestudio" target="_blank" rel="noreferrer" className="hover:underline">Instagram</a></li>
+              <li><a href="https://www.facebook.com/alpacacreativestudio7" target="_blank" rel="noreferrer" className="hover:underline">Facebook</a></li>
+              <li><a href="https://www.linkedin.com/company/alpaca-creative-studio7" target="_blank" rel="noreferrer" className="hover:underline">LinkedIn</a></li>
             </ul>
           </div>
           <div>
