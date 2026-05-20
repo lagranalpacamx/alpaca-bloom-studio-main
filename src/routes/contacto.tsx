@@ -58,6 +58,19 @@ function Contacto() {
           method="POST"
           className="space-y-6"
         >
+
+<input  
+  type="hidden"
+  name="_subject"
+  value="Nuevo mensaje desde Alpaca"
+/>
+
+<input
+  type="hidden"
+  name="_next"
+  value="https://alpaca.com.mx/contacto"
+/>
+
           <div>
             <label className="font-mono text-[11px] uppercase tracking-widest text-muted-foreground block mb-3">
               (01) Me interesa
@@ -95,10 +108,11 @@ function Contacto() {
               (06) Cuéntanos sobre tu proyecto
             </label>
             <textarea
-              rows={5}
-              required
-              className="w-full bg-transparent border-b-2 border-border focus:border-foreground outline-none py-3 text-lg resize-none"
-            />
+  name="message"
+  rows={5}
+  required
+  className="w-full bg-transparent border-b-2 border-border focus:border-foreground outline-none py-3 text-lg resize-none"
+/>
           </div>
 
           <button
